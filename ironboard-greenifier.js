@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name       Ironboard Greenifier
+// @author     molgin
 // @namespace  http://github.com/molgin
 // @version    0.1
 // @description  Greenifies your stubbornly grey labs
@@ -19,19 +20,33 @@ function addJQuery(callback) {
   document.body.appendChild(script);
 }
 
+// (function ($) {
+//    $(document);
+// }(jQuery));
+
 // the guts of this userscript
 function main() {
   // Note, jQ replaces $ to avoid conflicts.
   // alert("There are " + jQ('tbody.assignment-table-body tr').length + " labs on this page.");
   var labs = jQ('tbody.assignment-table-body tr');
-  console.log(labs);
+  // console.log(labs);
     
   // List the exact names of your broken userscripts here
-  var brokenLabs = ["Playlister Cli"];
+  var brokenLabs = ["Playlister Cli", "Code Coverage"];
 
   for (var i = 0; i < labs.length; i++) {
-    var $lab = labs[i];
-    
+    var lab = jQ(labs[i]);
+    var labName = lab.find("span.lab-index-lab-title").text();
+    // console.log(lab);
+    console.log(labName);
+    if (jQ.inArray(labName, brokenLabs) != -1) {
+      console.log("hello from if")
+      // var progressBar = lab.find("div.progress-bar")
+      // for (var i = 0; i < progressBar.length; i++) {
+      //   var bar = jQ(progressBar[i])
+      //   // if (!)
+      // }
+    }
   }
 }
 
