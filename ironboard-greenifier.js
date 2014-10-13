@@ -48,11 +48,17 @@ function main() {
       };
       $check = jQ($lab.find("i.fa-ban"));
       if ($check.hasClass("fa-ban")) {
-        $check.removeClass("fa-ban")
-        $check.addClass("fa-check")
+        $check.removeClass("fa-ban");
+        $check.addClass("fa-check");
       };
     };
   };
+
+  var progressCount = jQ("span.lab-index-title-progress").text();
+  var completed = progressCount.split(" / ")[0];
+  var total = progressCount.split(" / ")[1];
+  var newCount = parseInt(completed) + brokenLabs.length - 1 + " / " + total;
+  jQ("span.lab-index-title-progress").text(newCount);
 }
 
 // load jQuery and execute the main function
