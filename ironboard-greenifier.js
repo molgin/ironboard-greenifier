@@ -37,14 +37,13 @@ function main() {
   for (var i = 0; i < labs.length; i++) {
     var lab = jQ(labs[i]);
     var labName = lab.find("span.lab-index-lab-title").text();
-    // console.log(lab);
+    console.log(lab);
     console.log(labName);
     if (jQ.inArray(labName, brokenLabs) != -1) {
-      console.log("hello from if")
-      // var progressBar = lab.find("div.progress-bar")
+      console.log("hello from if");
+      var progressBar = lab.find("div.progress-bar");
       // for (var i = 0; i < progressBar.length; i++) {
       //   var bar = jQ(progressBar[i])
-      //   // if (!)
       // }
     }
   }
