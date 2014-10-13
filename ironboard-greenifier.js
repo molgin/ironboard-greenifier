@@ -35,17 +35,21 @@ function main() {
   var brokenLabs = ["Playlister Cli", "Code Coverage"];
 
   for (var i = 0; i < labs.length; i++) {
-    var lab = jQ(labs[i]);
-    var labName = lab.find("span.lab-index-lab-title").text();
-    console.log(lab);
-    console.log(labName);
+    var $lab = jQ(labs[i]);
+    var labName = $lab.find("span.lab-index-lab-title").text();
+    // console.log($lab);
+    // console.log(labName);
     if (jQ.inArray(labName, brokenLabs) != -1) {
       console.log("hello from if");
-      var progressBar = lab.find("div.progress-bar");
-      // for (var i = 0; i < progressBar.length; i++) {
-      //   var bar = jQ(progressBar[i])
-      // }
-    }
+      var progressBar = $lab.find("div.progress-bar");
+      for (var j = 0; j < progressBar.length; j++) {
+        var $bar = jQ(progressBar[j]);
+        if($bar.hasClass("progress-bar-fis-gray")){
+          $bar.removeClass("progress-bar-fis-gray")
+          $bar.addClass("progress-bar-success");
+        }
+      };
+    };
   }
 }
 
