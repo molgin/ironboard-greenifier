@@ -27,7 +27,7 @@ function main() {
   // console.log(labs);
     
   // List the exact names of your broken userscripts here
-  var brokenLabs = ["Playlister Cli", "Code Coverage", "Find Missing Pet", "Cartoon Collections", "Oo Basics", "Oo Counting Sentences", "Scraping Kickstarter", "Email Guesser", "Spotify Api Todo", "Artist Song Modules"];
+  var brokenLabs = [];
 
   for (var i = 0; i < labs.length; i++) {
     var $lab = jQ(labs[i]);
@@ -52,7 +52,7 @@ function main() {
   var progressCount = jQ("span.lab-index-title-progress").text();
   var completed = progressCount.split(" / ")[0];
   var total = progressCount.split(" / ")[1];
-  var newCount = parseInt(completed) + brokenLabs.length - 1 + " / " + total;
+  var newCount = parseInt(completed) + brokenLabs.length + " / " + total;
   jQ("span.lab-index-title-progress").text(newCount);
 }
 
