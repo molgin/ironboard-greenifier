@@ -32,25 +32,27 @@ function main() {
   // console.log(labs);
     
   // List the exact names of your broken userscripts here
-  var brokenLabs = ["Playlister Cli", "Code Coverage"];
+  var brokenLabs = ["Playlister Cli", "Code Coverage", "Find Missing Pet", "Cartoon Collections", "Oo Basics", "Oo Counting Sentences", "Scraping Kickstarter", "Email Guesser", "Spotify Api Todo", "Artist Song Modules"];
 
   for (var i = 0; i < labs.length; i++) {
     var $lab = jQ(labs[i]);
     var labName = $lab.find("span.lab-index-lab-title").text();
-    // console.log($lab);
-    // console.log(labName);
     if (jQ.inArray(labName, brokenLabs) != -1) {
-      console.log("hello from if");
       var progressBar = $lab.find("div.progress-bar");
       for (var j = 0; j < progressBar.length; j++) {
         var $bar = jQ(progressBar[j]);
         if($bar.hasClass("progress-bar-fis-gray")){
           $bar.removeClass("progress-bar-fis-gray")
           $bar.addClass("progress-bar-success");
-        }
+        };
+      };
+      $check = jQ($lab.find("i.fa-ban"));
+      if ($check.hasClass("fa-ban")) {
+        $check.removeClass("fa-ban")
+        $check.addClass("fa-check")
       };
     };
-  }
+  };
 }
 
 // load jQuery and execute the main function
