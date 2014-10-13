@@ -19,11 +19,6 @@ function addJQuery(callback) {
   }, false);
   document.body.appendChild(script);
 }
-
-// (function ($) {
-//    $(document);
-// }(jQuery));
-
 // the guts of this userscript
 function main() {
   // Note, jQ replaces $ to avoid conflicts.
