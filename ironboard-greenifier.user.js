@@ -19,12 +19,12 @@ function addJQuery(callback) {
   }, false);
   document.body.appendChild(script);
 }
+
 // the guts of this userscript
 function main() {
   // Note, jQ replaces $ to avoid conflicts.
   // alert("There are " + jQ('tbody.assignment-table-body tr').length + " labs on this page.");
   var labs = jQ('tbody.assignment-table-body tr');
-  // console.log(labs);
     
   // List the exact names of your broken userscripts here
   var brokenLabs = [];
@@ -40,6 +40,10 @@ function main() {
           $bar.removeClass("progress-bar-fis-gray")
           $bar.addClass("progress-bar-success");
         };
+        if($bar.hasClass("progress-bar-danger")){
+          $bar.removeClass("progress-bar-danger")
+          $bar.addClass("progress-bar-success");
+        };
       };
       $check = jQ($lab.find("i.fa-ban"));
       if ($check.hasClass("fa-ban")) {
@@ -52,7 +56,10 @@ function main() {
   var progressCount = jQ("span.lab-index-title-progress").text();
   var completed = progressCount.split(" / ")[0];
   var total = progressCount.split(" / ")[1];
+
+  // Adjust your completed lab count here
   var newCount = parseInt(completed) + brokenLabs.length + " / " + total;
+
   jQ("span.lab-index-title-progress").text(newCount);
 }
 

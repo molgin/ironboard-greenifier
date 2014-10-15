@@ -36,15 +36,16 @@ Every time a new lab fails to turn green when you've completed it, you'll need t
 
 #### Optional: Adjusting the completed lab count
 
-Greenifier updates the completed lab count around line 55:
+Greenifier updates the completed lab count around line 60:
 
+    // Adjust your completed lab count here
     var newCount = parseInt(completed) + brokenLabs.length + " / " + total;
 
 By default, it adds the number of broken labs to the original completed lab count.
 
-This is accurate-ish, but for me it results in the completed lab count being too high by 1, because I guess one of my broken labs is still registering as completed in some way. So in my version of the script, I subtract 1 from `brokenLabs.length` on that line. If you notice that your new completed lab count is inaccurate, just adjust this line as necessary to make it right.
+This is accurate-ish, but for me it results in the completed lab count being too high by 1, because I guess one of my broken labs is still registering as completed for purposes of the total. So in my version of the script, I subtract 1 from `brokenLabs.length` on that line. If you notice that your new completed lab count is inaccurate, just adjust this line as necessary to make it right.
 
-#### Important note for iOS
+#### Note for iOS
 
 I don't know the url of the Your Progress page for iOS. You'll have change the URL in the `@match` on line 7. Or add it on a second `@match` line and open a pull request. Or let me know what it is and I'll add it. Whatever.
 
