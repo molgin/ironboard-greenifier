@@ -47,7 +47,7 @@ This is accurate-ish, but for me it results in the completed lab count being too
 
 #### Note for iOS
 
-I don't know the url of the Your Progress page for iOS. You'll have change the URL in the `@match` on line 7. Or add it on a second `@match` line and open a pull request. Or let me know what it is and I'll add it. Whatever.
+I don't know the url of the Your Progress page for iOS. I assume you have one. You'll have to change the URL in the `@match` on line 7. Or add it on a second `@match` line and open a pull request. Or let me know what it is and I'll add it. Whatever.
 
 ## That's it
 
