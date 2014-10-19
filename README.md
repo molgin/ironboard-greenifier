@@ -1,8 +1,8 @@
 # Ironboard Greenifier
 
-Ironboard Greenifier is a simple userscript for Flatiron School students who are irrationally annoyed that not all of their completed labs turn green on Ironboard. Or rationally annoyed because it makes it harder to tell what they have or haven't finished.
+Ironboard Greenifier is a simple userscript for Flatiron School students who are irrationally annoyed that not all of their completed labs turn green on Ironboard. Or rationally annoyed because it makes it harder to tell what they have or haven’t finished.
 
-You supply a list of the labs that should rightly be green but aren’t. Greenifier makes them green. It also changes the icon in the "Complete?" column from a no symbol to a check mark, and corrects the completed lab count.
+You supply a list of the labs that should rightly be green but aren’t. Greenifier makes them green. It also changes the icon in the “Complete?” column from a no symbol to a check mark, and corrects the completed lab count.
 
 Greenifier works on the Your Progress page only.
 
@@ -10,7 +10,7 @@ Greenifier works on the Your Progress page only.
 
 To use Ironboard Greenifier, you’ll need [Tampermonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en) or [Greasemonkey for Firefox](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/).
 
-Once you have one of those installed, click on the ironboard-greenifier.user.js file, and then click "Raw" to open the file directly. You should see an install page or dialog; follow its instructions to install the script.
+Once you have one of those installed, click on the ironboard-greenifier.user.js file, and then click “Raw” to open the file directly. You should see an install page or dialog; follow its instructions to install the script.
 
 ## Setup
 
@@ -18,8 +18,8 @@ Greenifier won’t work until you've set it up with your information. I’m too 
 
 To edit the script:
 
-- In Firefox, go to `Tools > Greasemonkey > Manage User Scripts...`. Choose Ironboard Greenifier, and click "Edit this user script." It will open in a text editor; when you’re done editing, just save the file.
-- In Chrome, click the Tampermonkey icon, and then click "Dashboard." In the new tab that opens, click on Ironboard Greenifier. When you're done editing, click the disk icon to save.
+- In Firefox, go to `Tools > Greasemonkey > Manage User Scripts...`. Choose Ironboard Greenifier, and click “Edit this user script.” It will open in a text editor; when you’re done editing, just save the file.
+- In Chrome, click the Tampermonkey icon, and then click “Dashboard.” In the new tab that opens, click on Ironboard Greenifier. When you're done editing, click the disk icon to save.
 
 ### What to edit
 
