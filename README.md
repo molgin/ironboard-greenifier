@@ -38,12 +38,11 @@ Every time a new lab fails to turn green when you've completed it, you’ll need
 
 Greenifier updates the completed lab count around line 60:
 
-    // Adjust your completed lab count here
-    var newCount = parseInt(completed) + brokenLabs.length + " / " + total;
+    var newCount = parseInt(total) - $stillNotDone.length + " / " + total;
 
-By default, it adds the number of broken labs to the original completed lab count.
+After greenifying, it counts the labs that still don’t have checkmarks (`$stillNotDone.length`) and subtracts that number from the total number of labs.
 
-This is accurate-ish, but for me it results in the completed lab count being too high by 1, because I guess one of my broken labs is still registering as completed for purposes of the total. So in my version of the script, I subtract 1 from `brokenLabs.length` on that line. If you notice that your new completed lab count is inaccurate, just adjust this line as necessary to make it right.
+This should be accurate, as long as you’ve added all your broken labs to the list. But if you notice that your new completed lab count is still inaccurate, you can always adjust this line as necessary to make it right.
 
 #### Note for iOS
 

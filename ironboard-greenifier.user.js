@@ -56,9 +56,9 @@ function main() {
   var progressCount = jQ("span.lab-index-title-progress").text();
   var completed = progressCount.split(" / ")[0];
   var total = progressCount.split(" / ")[1];
-
-  // Adjust your completed lab count here
-  var newCount = parseInt(completed) + brokenLabs.length + " / " + total;
+  var $stillNotDone = jQ("i.fa-ban");
+    
+  var newCount = parseInt(total) - $stillNotDone.length + " / " + total;
 
   jQ("span.lab-index-title-progress").text(newCount);
 }
