@@ -2,7 +2,7 @@
 // @name       Ironboard Greenifier
 // @author     molgin
 // @namespace  http://github.com/molgin
-// @version    0.1
+// @version    0.1.1
 // @description  Greenifies your stubbornly grey labs
 // @match      http://learn.flatironschool.com/learn/ruby-006/web-development/labs
 // @copyright  2014+, molgin
