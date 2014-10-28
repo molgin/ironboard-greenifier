@@ -5,6 +5,7 @@
 // @version    0.1.1
 // @description  Greenifies your stubbornly grey labs
 // @match      http://learn.flatironschool.com/learn/ruby-006/web-development/labs
+// @match      http://learn.flatironschool.com/learn/ios-003/ios/labs
 // @copyright  2014+, molgin
 // ==/UserScript==
 

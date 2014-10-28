@@ -44,10 +44,6 @@ After greenifying, it counts the labs that still don’t have checkmarks (`$stil
 
 This should be accurate, as long as you’ve added all your broken labs to the list. But if you notice that your new completed lab count is still inaccurate, you can always adjust this line as necessary to make it right.
 
-#### Note for iOS
-
-I don’t know the url of the Your Progress page for iOS. I assume you have one. You’ll have to change the URL in the `@match` on line 7. Or add it on a second `@match` line and open a pull request. Or let me know what it is and I'll add it. Whatever.
-
 ## That’s it
 
 Save your edits, refresh the Your Progress page and enjoy your appropriately green labs!
