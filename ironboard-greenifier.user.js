@@ -32,7 +32,7 @@ function main() {
 
   for (var i = 0; i < labs.length; i++) {
     var $lab = jQ(labs[i]);
-    var labName = $lab.find("span.lab-index-lab-title").text();
+    var labName = $lab.find("span.lab-index-lab-title").text().trim();
     if (jQ.inArray(labName, brokenLabs) != -1) {
       var progressBar = $lab.find("div.progress-bar");
       for (var j = 0; j < progressBar.length; j++) {
