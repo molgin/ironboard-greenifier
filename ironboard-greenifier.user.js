@@ -52,14 +52,19 @@ function main() {
         $check.addClass("fa-check");
       };
     };
+    if (labName === "Simple Blackjack Cli") {
+      $lab.remove();
+    }
   };
 
   var progressCount = jQ("span.lab-index-title-progress").text();
   var completed = progressCount.split(" / ")[0];
-  var total = progressCount.split(" / ")[1];
+  // var total = progressCount.split(" / ")[1];
   var $stillNotDone = jQ("i.fa-ban");
+  var total = jQ('tbody.assignment-table-body tr').length;
     
-  var newCount = parseInt(total) - $stillNotDone.length + " / " + total;
+  // Adjust your completed lab count here
+  var newCount = total - $stillNotDone.length + " / " + total;
 
   jQ("span.lab-index-title-progress").text(newCount);
 }
