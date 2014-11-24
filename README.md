@@ -36,9 +36,9 @@ Every time a new lab fails to turn green when you've completed it, you’ll need
 
 #### Optional: Adjusting the completed lab count
 
-Greenifier updates the completed lab count around line 60:
+Greenifier updates the completed lab count around line 67:
 
-    var newCount = parseInt(total) - $stillNotDone.length + " / " + total;
+    var newCount = total - $stillNotDone.length + " / " + total;
 
 After greenifying, it counts the labs that still don’t have checkmarks (`$stillNotDone.length`) and subtracts that number from the total number of labs.
 
